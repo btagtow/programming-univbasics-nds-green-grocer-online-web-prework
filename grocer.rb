@@ -39,7 +39,7 @@ def apply_coupons(cart:[], coupons:[])
     coupons.each do |coupon|
       if my_item == coupon[:item] && info[:count] >= [:num]
         info[:count] = info[:count] - coupon[:num]
-        if result[""]
+        if result["#{food}"]
   
 #   index = 0 
 #   new_array = []
