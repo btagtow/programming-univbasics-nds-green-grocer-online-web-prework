@@ -34,22 +34,22 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart:[], coupons:[])
-  result = {}
-  cart.each do |my_item, info|
-    coupons.each do |coupon|
-      if my_item == coupon[:item] && info[:count] >= [:num]
-        info[:count] = info[:count] - coupon[:num]
-        if result["#{my_item} W/COUPON"]
-          result["#{my_item} W/COUPON"][:count] += 1 
-        else 
-          result ["#{my_item} W/COUPON"] = {:price => coupon[:cost], :clearance => info [:clearance], :count => 1}
-        end 
-      end 
-    end 
-    result[my_item] = info 
-  end 
-  result 
-end 
+#   result = {}
+#   cart.each do |my_item, info|
+#     coupons.each do |coupon|
+#       if my_item == coupon[:item] && info[:count] >= [:num]
+#         info[:count] = info[:count] - coupon[:num]
+#         if result["#{my_item} W/COUPON"]
+#           result["#{my_item} W/COUPON"][:count] += 1 
+#         else 
+#           result ["#{my_item} W/COUPON"] = {:price => coupon[:cost], :clearance => info [:clearance], :count => 1}
+#         end 
+#       end 
+#     end 
+#     result[my_item] = info 
+#   end 
+#   result 
+# end 
   
 #   index = 0 
 #   new_array = []
