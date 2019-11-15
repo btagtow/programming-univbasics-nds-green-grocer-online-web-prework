@@ -33,14 +33,14 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
 end
 
-def apply_coupons(cart, coupons)
-  index = 0 
-  new_array = []
-  while index < cart.length do
-    if 
-      coupon_name = coupons[index]
+# def apply_coupons(cart, coupons)
+#   index = 0 
+#   new_array = []
+#   while index < cart.length do
+#     if 
+#       coupon_name = coupons[index]
     
-    find_item_by_name_in_collection(coupons[index], cart)
+#     find_item_by_name_in_collection(coupons[index], cart)
     
     
     
