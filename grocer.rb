@@ -40,7 +40,7 @@ def apply_coupons(cart:[], coupons:[])
       if my_item == coupon[:item] && info[:count] >= [:num]
         info[:count] = info[:count] - coupon[:num]
         if result["#{my_item} W/COUPON"]
-          result["#{my_item} W/COUPON"]
+          result["#{my_item} W/COUPON"][:count]
   
 #   index = 0 
 #   new_array = []
