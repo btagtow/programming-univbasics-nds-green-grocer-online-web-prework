@@ -37,7 +37,7 @@ def apply_coupons(cart:[], coupons:[])
   result = {}
   cart.each do |my_item, info|
     coupons.each do |coupon|
-      if my_item == coupon[:item] && info[:count] >=
+      if my_item == coupon[:item] && info[:count] >= [:num]
         coupon[:num]
         if result[""]
   
