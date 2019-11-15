@@ -33,7 +33,7 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
 end
 
-def apply_coupons(cart, coupons)
+# def apply_coupons(cart, coupons)
   
   
 #   index = 0 
@@ -52,7 +52,26 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
 # end
-
+def apply_coupons(cart, coupons) 
+  
+  coupons.each do |coupon| 
+    coupon.each do |attribute, value| 
+      name = coupon[:item] 
+    
+      if cart[name] && cart[name][:count] >= coupon[:num] 
+        if cart["#{name} W/COUPON"] 
+          cart["#{name} W/COUPON"][:count] += 1 
+        else 
+          cart["#{name} W/COUPON"] = {:price => coupon[:cost], 
+          :clearance => cart[name][:clearance], :count => 1} 
+        end 
+  
+      cart[name][:count] -= coupon[:num] 
+    end 
+  end 
+end 
+  cart 
+end
 def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
