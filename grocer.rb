@@ -42,7 +42,7 @@ def apply_coupons(cart:[], coupons:[])
         if result["#{my_item} W/COUPON"]
           result["#{my_item} W/COUPON"][:count] += 1 
         else 
-          result ["#{my_item} W/COUPON"] = [:price =>]
+          result ["#{my_item} W/COUPON"] = [:price => coupon[:cost], :clearance => ]
   
 #   index = 0 
 #   new_array = []
